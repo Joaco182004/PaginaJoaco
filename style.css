@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@700&family=Montserrat:wght@100;200;300;400;500;600;700&family=Oswald&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+html{
+    line-height: 1.15;
+    -webkit-text-size-adjust: 100%;
+    font-size: 62.5%;
+}
+.header{
+    height: 8rem;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 5;
+  
+    display: flex;
+    justify-content: space-between;
+}
+.header__middle{
+    display: none;
+}
+.header__left{
+    display: block;
+    overflow: hidden;
+    padding: 0 2rem;
+}
+.header__logo{
+    height: 8rem;
+    width: 10rem;
+
+}
+.header__right{
+    margin: 0 auto;
+    margin-right: 2rem;
+}
+.header__nav__btn{
+    display: none;
+    font-size: 1.4rem;
+    font-weight: bold;
+    padding: 1rem;
+    border-radius: 1.5rem;
+    color: var(--primary-color);
+    text-transform: capitalize;
+    text-decoration: none;
+    
+    transition: background 0.3s linear; 
+}
+.header__nav__btn:hover{
+    background: rgba(0, 0, 0, 0.103);;
+}
+.header__nav__btn.menu__btn{
+    display: inline-block;
+    font-size: 20px;
+    color: white;
+
+}
+.navigation{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 80%;
+    max-width: 35rem;
+    height: 100%;
+    z-index: 10;
+    background:#fff;
+    overflow-y: scroll;
+    transform: translateX(100%);
+    transition: transform 0.7s cubic-bezier(0.5, 0, 0, 0.75);
+}
+.navigation.is--active{
+    transform: translateX(0);
+}
+.navigation>ul{
+    width: 80%;
+    margin: 0 auto;
+    list-style: none;
+    
+}
+.navigation>ul>li{
+    width: 100%;
+    padding: 1.2rem 0;
+    padding-left: 2rem;
+    margin-bottom: 0.5rem;
+  
+    cursor: pointer;
+    border-radius: 1.2rem;
+    transition: background-color 0.33s ease;
+}
+.close__btn__container{
+    text-align: right;
+    margin:2rem 3rem;
+}
+#equis{
+    font-size: 3rem;
+    cursor:pointer
+}
+.nav__link{
+    color: #393c41;
+    font-weight: 600;
+    font-size: 1.5rem;
+    text-decoration: none;
+    text-transform: capitalize;
+}
+.navigation>ul>li:hover{
+    background-color:#0000000d;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    max-width: 100vw;
+    overflow-x: hidden;
+
+}
+.section{
+    
+    background: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+.section.one{
+    background-image: url(./background.jpg);
+}
+.section.two{
+    background-image: url(./background2.jpg);
+}
+.section.three{
+    background-image: url(./background3.jpg);
+}
+.section.four{
+    background-image: url(./background4.jpg);
+}
+.section.five{
+    background-image: url(./WhatsApp\ Image\ 2022-04-19\ at\ 10.30.46\ AM\ \(1\).jpeg);
+}
+.section.six{
+    background-image: url(./background.jpg);
+}
+.section.seven{
+    background-image: url(./background.jpg);
+}
+.section__content{
+    position: absolute;
+    top:10%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    text-transform: capitalize;
+    color:var(--primary-color)
+}
+.section__content__title{
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+.section__content__subtitle{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.section__content__subtitle>a{
+    color: inherit;
+    text-decoration: none;
+}
+.section__content__subtitle>a:hover{
+    text-decoration: underline;
+}
+.section__action__container{
+    position: absolute;
+    bottom: 15%;
+    left:50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: center;
+}
+.secction__action__btn{
+    font-size: 1.5rem;
+    font-weight: 500;
+    padding: 1rem;
+    border-radius: 2rem;
+    background: red;
+    flex-basis: 100%;
+    margin-bottom: 1rem;
+    text-transform: capitalize;
+}
+.action__btn__primary{
+    background: rgba(23,26,42,0.8);
+    color:white
+}
+.action__btn__secondary{
+    background: rgba(255,255,255,0.65);
+    color:var(--primary-color)
+}
+.blur__overlay{
+    display: none;
+     position: fixed;
+     top:0;
+     left: 0;
+     width: 100%;
+     height: 100%;
+     z-index:1;
+     background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(1rem);
+}
+.blur__overlay.is--active{
+    display: block;
+ 
+}
